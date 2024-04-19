@@ -119,3 +119,8 @@ footer ul li i {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.section .buttom {
+    float: right;
+    margin-left: 20px; /* 添加左边距以与文字分隔 */
+}
