@@ -2,68 +2,132 @@
 <html lang="zh">
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
-    
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    #about-me, #links {
-        padding: 20px;
-    }
-    
-    h2 {
-        color: #333;
-    }
-    
-    ul {
-        list-style-type: none;
-    }
-    
-    ul li {
-        padding: 5px;
-    }
-    
-    a {
-        color: #007bff;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        text-decoration: underline;
-    }
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* 更浅的背景色 */
+}
+
+header {
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(16, 192, 22, 0.178);
+}
+
+#about-me, #links {
+    padding: 20px;
+}
+
+h2 {
+    color: #2b2b2b;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 5px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 图标样式 */
+ul li i {
+    margin-right: 8px;
+}
+
+footer {
+    color: #000000;
+    padding: 20px;
+    text-align: left;
+    background-color: rgba(0, 160, 139, 0.295);
+}
+
+footer h2 {
+    color: #000000;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    padding: 5px;
+}
+
+footer ul li i {
+    margin-right: 8px;
+}
+.project-image {
+    float: right; /* 使图片向右浮动 */
+    margin-left: 20px; /* 添加左边距以与文字分隔 */
+    width: 250px; /* 定义图片的宽度 */
+    height: 250px; /* 定义图片的高度 */
+}
+
 </style>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<nav class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div>
+            <a href="/" class="text-lg font-semibold">Yuanle Yao's Personal Homepage</a>
+        </div>
+        <div>
+            <ul class="flex space-x-4">
+                <li>
+                    <a href="/about-me.html" class="flex items-center">
+                        <i class="fas fa-user mr-2"></i>
+                    </a>
+                </li>
+                <!-- 添加更多导航项 -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <body>
     <header>
-        <h1>欢迎来到我的个人主页</h1>
+        <h1>Welcome to Yuanle Yao's Personal Homepage</h1>
     </header>
-    <section id="about-me">
-        <h2>关于我</h2>
-        <p>你好！我是[你的名字]，一名热爱编程和技术的开发者。在这里，你可以找到我的项目、博客文章和联系方式。</p>
+
+    <section id="current-projects" class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Current Projects</h2>
+        <img src="C:\Users\leoya\Desktop\个人主页\LEooooooo12138.github.io--1\images\imagea.jpg" class="project-image">
+        <p> Intelligent Power Management and Trading System (SEMTS)</p>
+        <p>The Smart Home Energy Management and Trading System (SEMTS) is a revolutionary application designed to improve home energy efficiency. It enables users to monitor and control household appliances and power production units in real time, optimising energy use and promoting energy self-sufficiency. Through intelligent analytics and personalized recommendations, SEMTS aims to reduce energy waste while providing a platform that allows users to sell or feed excess power back to the grid for efficient energy distribution. This project represents not only technological innovation, but also a commitment to environmental protection and sustainable development.</p>
     </section>
-    <section id="links">
-        <h2>链接</h2>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Yuanle Yao, a developer who loves programming and technology. Here you can find my projects, blog posts and contact information.</p>
+    </section>
+
+</body>
+
+
+<footer>
+    <section id="contact">
+        <h2>Contact</h2>
         <ul>
-            <li><a href="https://github.com/你的GitHub用户名">我的GitHub</a></li>
-            <li><a href="你的LinkedIn资料链接">我的LinkedIn</a></li>
-            <li><a href="你的博客或其他链接">我的博客</a></li>
+            <li><i class="fab fa-github"></i> <a href="https://github.com/LEooooooo12138">GitHub</a></li>
+            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yuanle-yao-277472297/">LinkedIn</a></li>
+            <li><i class="fab fa-weixin"></i>WeChat: NClol12138</a></li>
+            <li><i class="fas fa-envelope"></i>Email: leoyao12138@gmail.com</a></li>
         </ul>
     </section>
-</body>
+</footer>
 </html>
