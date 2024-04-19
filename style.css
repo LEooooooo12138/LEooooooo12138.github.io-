@@ -2,6 +2,12 @@
     background-image: url('images\imagea.jpg');
   }
 
+.jersey-20-regular {
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -54,6 +60,9 @@ footer {
 }
 
 footer h2 {
+    font-size: 24px;
+    font-style: inherit;
+    font-weight: bold;
     color: #000000;
 }
 
