@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* 更浅的背景色 */
+}
+
+header {
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(16, 192, 22, 0.178);
+}
+
+#about-me, #links {
+    padding: 20px;
+}
+
+h2 {
+    color: #2b2b2b;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 5px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 图标样式 */
+ul li i {
+    margin-right: 8px;
+}
+
+footer {
+    color: #000000;
+    padding: 20px;
+    text-align: left;
+    background-color: rgba(0, 160, 139, 0.295);
+}
+
+footer h2 {
+    color: #000000;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    padding: 5px;
+}
+
+footer ul li i {
+    margin-right: 8px;
+}
+.project-image {
+    float: right; /* 使图片向右浮动 */
+    margin-left: 20px; /* 添加左边距以与文字分隔 */
+    width: 250px; /* 定义图片的宽度 */
+    height: 250px; /* 定义图片的高度 */
+}
+.project-image {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
