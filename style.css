@@ -12,11 +12,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* 更浅的背景色 */
+    background-color: #e8fcf0cb; /* 更浅的背景色 */
 }
 
 header {
-    color: #000000;
+    color: #e8fcf0cb;
     padding: 20px;
     text-align: center;
     background-color: rgba(16, 192, 22, 0.178);
@@ -81,8 +81,8 @@ footer ul li i {
 .project-image {
     float: right; /* 使图片向右浮动 */
     margin-left: 20px; /* 添加左边距以与文字分隔 */
-    width: 250px; /* 定义图片的宽度 */
-    height: 250px; /* 定义图片的高度 */
+    width: 200px; /* 定义图片的宽度 */
+    height: 450px; /* 定义图片的高度 */
 }
 .project-image {
     animation: fadeIn 2s ease-in-out;
@@ -157,4 +157,90 @@ footer ul li i {
 /* 鼠标悬停时触发的动画 */
 .animate-move-fade:hover {
     animation: moveAndFade 1s ease forwards;
+}
+
+.dosis-regular {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .dosis-bold {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .project-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .team-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .team-member, .project-time {
+    margin-right: 20px; /* 或者根据您的布局需要调整 */
+  }
+
+  .teko-bold {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .teko-light {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .lugrasimo-regular {
+    font-family: "Lugrasimo", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .skills-section {
+    /* Add additional styling as needed */
+}
+
+.skill-category {
+    margin-bottom: 20px; /* Adds space between categories */
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust the space between skill items */
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the space between the icon and the text */
+}
+
+.skill-icon {
+    font-size: 24px; /* Increase the size of the icons */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .skill-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.custom-btn {
+    padding: 10px 25px; /* 示例内边距，根据需要调整 */
+    font-size: 0.875rem; /* 示例字体大小，与 Tailwind 的 text-xs 相当 */
+    /* 其他需要的样式 */
 }
