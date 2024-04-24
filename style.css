@@ -10,16 +10,54 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 20px;
     background-color: #e8fcf0cb; /* 更浅的背景色 */
 }
 
 header {
     color: #e8fcf0cb;
-    padding: 20px;
     text-align: center;
     background-color: rgba(16, 192, 22, 0.178);
+}
+
+#introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-AI{
+    float: right; /* 让图片浮动到右侧，文字环绕在左侧 */
+    width: 400px; /* 设置图片的固定宽度 */
+    height: 300px; /* 设置图片的固定高度 */
+    object-fit: cover; /* 确保图片在固定的宽高比例中保持其宽高比 */
+    margin-left: 20px; /* 在图片的左侧添加一些空间，让文字不会紧贴图片 */
+    margin-right: 50px;
+}
+
+.image-experencelogo{
+    float: right; /* 让图片浮动到右侧，文字环绕在左侧 */
+    width: 200px; /* 设置图片的固定宽度 */
+    height: 100px; /* 设置图片的固定高度 */
+    object-fit: cover; /* 确保图片在固定的宽高比例中保持其宽高比 */
+    margin-left: 20px; /* 在图片的左侧添加一些空间，让文字不会紧贴图片 */
+    margin-right: 20px;
+}
+
+.image-edulogo{
+    float: left; /* 让图片浮动到右侧，文字环绕在左侧 */
+    width: 90px; /* 设置图片的固定宽度 */
+    height: 45px; /* 设置图片的固定高度 */
+    object-fit: cover; /* 确保图片在固定的宽高比例中保持其宽高比 */
+    margin-left: 20px; /* 在图片的左侧添加一些空间，让文字不会紧贴图片 */
+    margin-right: 50px;
+}
+
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 #about-me, #links {
@@ -78,12 +116,14 @@ footer ul li {
 footer ul li i {
     margin-right: 8px;
 }
+
 .project-image {
     float: right; /* 使图片向右浮动 */
     margin-left: 20px; /* 添加左边距以与文字分隔 */
     width: 200px; /* 定义图片的宽度 */
     height: 450px; /* 定义图片的高度 */
 }
+
 .project-image {
     animation: fadeIn 2s ease-in-out;
 }
@@ -215,16 +255,28 @@ footer ul li i {
     margin-bottom: 20px; /* Adds space between categories */
 }
 
+.skill-category h3{
+    font-size: 26px;
+}
+
 .skill-items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around; /* 平均分布在容器内，两端对齐 */
     gap: 15px; /* Adjust the space between skill items */
 }
 
 .skill-item {
-    display: flex;
-    align-items: center;
+    display: flex; /* 使用flex布局让图标和文字在同一行显示 */
+    align-items: center; /* 垂直居中对齐图标和文字 */
     gap: 10px; /* Adjust the space between the icon and the text */
+    flex: 0 1 22%; /* 调整flex基础大小和增长因子，确保一行只显示四个技能项 */
+    margin: 10px 0; /* 调整上下边距，移除左右边距设置 */
+    justify-content: center; /* 水平居中对齐图标和文字 */
+}
+
+.skill-item p{
+    font-size: 24px;
 }
 
 .skill-icon {
@@ -243,4 +295,21 @@ footer ul li i {
     padding: 10px 25px; /* 示例内边距，根据需要调整 */
     font-size: 0.875rem; /* 示例字体大小，与 Tailwind 的 text-xs 相当 */
     /* 其他需要的样式 */
+}
+
+@keyframes fadeInMoveIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadein-animation {
+    animation-name: fadeInMoveIn; /* 使用上面定义的动画 */
+    animation-duration: 2s; /* 动画持续时间为1秒 */
+    animation-fill-mode: both; /* 动画结束时保持最后一帧的状态 */
 }

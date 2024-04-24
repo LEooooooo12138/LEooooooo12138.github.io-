@@ -15,21 +15,21 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-<nav class="bg-green-600 text-white p-4">
+<nav class="bg-green-600 text-white p-4" style="padding: -20px; margin: -20px;">
     <div class="container mx-auto flex justify-between items-center">
         <div>
-            <a href="/" class="text-lg font-semibold">Yuanle Yao</a>
+            <a href="index.html" class="text-lg font-semibold">Yuanle Yao</a>
         </div>
         <div>
             <ul class="flex space-x-4">
                 <li>
-                    <a href="/about.html" class="flex items-center tooltip ">
+                    <a href="about.html" class="flex items-center tooltip ">
                         <i class="fas fa-user"></i>
                         <span class="tooltiptext animate-move-fade">About Me</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/contact.html" class="flex items-center tooltip">
+                    <a href="contact.html" class="flex items-center tooltip">
                         <i class="fas fa-mobile-alt"></i>
                         <span class="tooltiptext animate-move-fade">Contact Me</span>
                     </a>
@@ -42,11 +42,17 @@
 <body>
 
     <section id="introduction" class="p-6">
-        <h2 class="lugrasimo-regular" style="float: left; font-size: 20px;">I believe in the power of laughter and good code,<br> infusing them into every project</h2>
-    
-        <h2 class="teko-light" style="float: right; font-size: 30px;">Energetic Developer<br>Yuanle Yao<br>
-<a href="about.html" class="inline-block px-12 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700
-    hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out">More About Me</a>
+        <div>
+            <h2 class="teko-light" style="font-size: 30px;">Energetic Developer<br>Yuanle Yao</h2>
+            <h2 class="lugrasimo-regular" style="float: left; font-size: 20px;">I'm a brick, I move where I need to.</h2>
+            <br><br><br>
+            <a href="about.html" class="inline-block px-12 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700
+            hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out">More About Me</a>
+        </div>
+
+        <div class="image-container">
+            <img></img>
+        </div>
     </section>
     <br><br><br><br><br><br><hr>
     <section id="current-projects" class="p-6">
@@ -66,7 +72,7 @@
 </body>
 
 
-<footer>
+<footer style="padding: -20px; margin: -20px;">
     <section id="contact" class="jersey-20-regular">
         <h2>Contact</h2>
         <ul>
