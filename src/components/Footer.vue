@@ -3,12 +3,15 @@
     <el-divider content-position="left">@Yuanle Yao 2024</el-divider>
     <div class="footer-content">
       <div class="left-footer">
-        <span>
-          {{ $t("footers.leftTitle1") }}
-        </span>
-        <span>
-          {{ $t("footers.leftTitle2") }}
-        </span>
+        <div>
+            <p>
+              {{ $t("footers.leftTitle1") }}
+            </p>
+            <p>
+              {{ $t("footers.leftTitle2") }}
+            </p>
+        </div>
+        
       </div>
       <div class="right-footer">
         <el-link @click="centerDialogVisible = true">
@@ -64,7 +67,7 @@ const centerDialogVisible = ref(false);
 }
 
 .left-footer {
-  display: block;
+  display: flex;
   padding-left: 3rem;
   margin: 1rem;
 }

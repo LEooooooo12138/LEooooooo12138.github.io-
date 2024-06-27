@@ -12,17 +12,21 @@
             </el-button>
         </div>
         <div class="part2">
-            <h2>{{ $t ('home.part2Title1') }}</h2>
             <div>
-                <el-text class="mb-1" style="padding-right: 20px;">{{ $t ('home.part2Content') }}</el-text>
-                <el-button type="primary" round @click="toCurrentProject">
-                    {{ $t ('home.button1') }}
-                </el-button>
+                <h2>{{ $t ('home.part2Title1') }}</h2>
+            <div>
+                    <el-text class="mb-1" style="padding-right: 20px;">{{ $t ('home.part2Content') }}</el-text>
+                    <el-button type="primary" round @click="toCurrentProject">
+                        {{ $t ('home.button1') }}
+                    </el-button>
+                </div>
             </div>
+            
         </div>
         <div class="ontheWay">
-            <el-image src="src/assets/TestImage.jpg"></el-image>
+            {{ $t ('home.stillWork') }}
         </div>
+        
     </div>
     <el-backtop :right="100" :bottom="100" />
     <footerOne></footerOne>
@@ -58,16 +62,24 @@ const toCurrentProject=() => {
 }
 
 .part2 {
-    position: block;
-    margin-left: 80%;
-    width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
     padding: 10px;
 }
 
 .ontheWay {
-    padding-top: 60px;
-    justify-items: center;
-    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px rgba(155, 155, 155, 0.741);
+    border-radius: 50px;
+    width: 100%;
+    height: 200px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+    font-size: 25px;
+    text-shadow: 1px 1px rgba(0, 206, 0, 0.696);
 }
 
 </style>

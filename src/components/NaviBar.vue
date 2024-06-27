@@ -64,7 +64,7 @@ const toggle = () => {
   } else {
     localStorage.setItem("language", "zh");
   }
-  locale.value = localStorage.getItem("language");
+  locale.value = localStorage.getItem("language") || 'zh';
 };
 </script>
 

@@ -1,7 +1,9 @@
 <template>
     <navi-bar></navi-bar>
     <el-space direction="vertical" size="large" class="mainBody">
-        <h1>{{ $t ('about.title1') }}</h1>
+        <div>
+            <h1>{{ $t ('about.title1') }}</h1>
+        </div>
         <el-button @click="download">{{ $t ('about.getResume') }}</el-button>
         <div>
             <h2>{{ $t ('about.part1Title') }}</h2>
@@ -45,8 +47,11 @@ const download = ()=> {
 
 <style scoped>
 .mainBody {
+    display: flex;
+    left: 0%;
     margin-left: 7rem;
     margin-right: 7rem;
+
 }
 
 .icons {

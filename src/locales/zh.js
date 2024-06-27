@@ -22,6 +22,7 @@ export default {
         button1: '了解更多',
         part2Title1: '现在正在进行的项目是',
         part2Content: '个人主页',
+        stillWork: '全新区域正在制作，敬请期待...',
     },
     about: {
         title1: '关于我',

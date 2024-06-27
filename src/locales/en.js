@@ -22,6 +22,7 @@ export default {
         button1: 'More',
         part2Title1: 'Now I am working on',
         part2Content: 'Personal Web Page',
+        stillWork: 'New area still working on it...',
     },
     about: {
         title1: 'About Me',
