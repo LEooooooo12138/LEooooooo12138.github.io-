@@ -37,5 +37,20 @@ export default {
          I have acquired a strong foundation of knowledge and essential skills that are applicable across various fields. Moreover,
           I have developed the ability to quickly grasp new information and adapt effectively within unfamiliar teams 
           and work environments.`,
+        part3Title: 'About what I am doing now',
+        part3Content: `As of July 2024, I am still studying for my postgraduate degree, 
+        before which I am doing my internship in China, during which I try to complete this website, 
+        and learn to use VUE.js and various plug-ins. I think it was a good exercise and experience, 
+        and I also hope that the experience of building this page will help me in the future, 
+        and I will keep updating this page and my github.`
+    },
+    current: {
+        title1: 'Current Project: ',
+        projectName: 'Personal Web Page',
+    },
+    past: {
+        title: 'Past Projects',
+        projectName1: 'Electrinical manager',
+
     }
 }

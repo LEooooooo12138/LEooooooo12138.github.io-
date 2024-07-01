@@ -1,12 +1,11 @@
 <template>
-  <div>
+  <div v-if="!isMobile">
     <el-config-provider :locale="locale"> </el-config-provider>
-
     <el-menu
       :router="true"
-      class="el-menu-demo"
+      class="el-menu-poper-demo"
       mode="horizontal"
-      :ellipsis="false"
+      ellipsis
       :popper-offset="6"
     >
       <el-menu-item index="/">
@@ -18,7 +17,7 @@
           <font-awesome-icon icon="user" style="padding-right: 8px" />
           {{ $t("nav.about") }}
         </el-menu-item>
-        <el-sub-menu index="/project">
+        <el-sub-menu index="/project" disabled="true">
           <template #title
             ><Edit
               style="
@@ -44,10 +43,17 @@
       </div>
     </el-menu>
   </div>
+
+  <div v-else>
+    我是移动端的navbae\r
+
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
+import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
+import { fa } from "element-plus/es/locales.mjs";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 const { locale } = useI18n();
 
@@ -64,8 +70,27 @@ const toggle = () => {
   } else {
     localStorage.setItem("language", "zh");
   }
-  locale.value = localStorage.getItem("language") || 'zh';
+  locale.value = localStorage.getItem("language") || "zh";
 };
+
+
+//=================
+const isMobile = ref(false)
+onMounted(()=>{
+    checkMobile();
+    // 监听窗口大小变化
+    window.addEventListener('resize', checkMobile);
+})
+onBeforeUnmount(()=>{
+  window.removeEventListener('resize', this.checkMobile);
+})
+const checkMobile = ()=>{
+  const val = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+  isMobile.value = val;
+}
+
+
 </script>
 
 

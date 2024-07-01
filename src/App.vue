@@ -24,4 +24,24 @@ body {
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+/* .route-enter-from {
+}
+.route-enter-active {
+    animation: fade-in 0.4s ease-in;
+}
+.route-enter-to {
+
+}
+
+@keyframes fade-in{
+  0% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+} */
 </style>

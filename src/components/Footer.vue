@@ -14,14 +14,19 @@
         
       </div>
       <div class="right-footer">
-        <el-link @click="centerDialogVisible = true">
-          <el-icon><ChatDotRound /></el-icon>
-          {{ $t("footers.contactWay1") }}: NClol12138
-        </el-link>
-        <span>
-          <font-awesome-icon icon="envelope" />
-          {{ $t("footers.contactWay2") }}: leoyao12138@gmail.com
-        </span>
+        <div>
+            <el-link @click="centerDialogVisible = true">
+            <el-icon style="padding-right: 4px ;"><ChatDotRound /></el-icon>
+              {{ $t("footers.contactWay1") }}: NClol12138
+            </el-link>
+        </div>
+        <div>
+          <el-link href="mailto:leoyao12138@gmail.com">
+            <font-awesome-icon icon="envelope" style="padding-right: 4px;"/>
+            {{ $t("footers.contactWay2") }}: leoyao12138@gmail.com
+          </el-link>
+        </div>
+
       </div>
     </div>
   </div>
@@ -68,18 +73,19 @@ const centerDialogVisible = ref(false);
 
 .left-footer {
   display: flex;
-  padding-left: 3rem;
-  margin: 1rem;
+  padding-left:5%;
+  /* margin: 30px; */
 }
 
 .right-footer {
-  margin: 3rem;
-  position: absolute;
-  right: 7rem;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  /* right: 7rem; */
 }
 
-.footer span {
-  display: block;
-  margin-bottom: 1rem;
-}
+
+
+
 </style>
