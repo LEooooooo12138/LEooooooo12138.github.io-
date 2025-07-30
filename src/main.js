@@ -3,7 +3,7 @@ import './style.css'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 
 import App from './App.vue'
 import component from 'element-plus/es/components/tree-select/src/tree-select-option.mjs'
@@ -12,6 +12,7 @@ import About from './views/about.vue'
 import PastProject from './views/pastProject.vue'
 import currentProject from './views/currentProject.vue'
 import contact from './views/contactMe.vue'
+import NotFound from './views/NotFound.vue'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 // import vue-i18n to achieve switch language
@@ -46,17 +47,20 @@ const i18n = createI18n ({
 
 
 const routes = [
-    { path: '/', component: index },
-    { path: '/about', component: About},
+    { path: '/', 
+        name: 'home',component: index },
+    { path: '/about',
+        name: 'about', component: About},
     { path: '/past', component: PastProject},
     { path: '/current', component: currentProject},
-    { path: '/contact', component: contact}
+    { path: '/contact', component: contact},
+    { path: '/:catchAll(.*)', component: NotFound}
 
 
 ]
 
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(),
     routes,
 })  
 

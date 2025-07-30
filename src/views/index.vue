@@ -1,5 +1,5 @@
 <template>
-  <navi-bar></navi-bar>
+  <!-- <el-skeleton animated loading/> -->
   <div class="mainBody">
     <div class="part1 mb-4">
         <div style="margin-top: 25px;">
@@ -9,10 +9,12 @@
               {{ $t("home.button1") }}
             </el-button>
         </div>
-          <el-image
+            <el-image
             src="src/assets/person1.png"
-            style="width: 300px; height: 300px;"
+            style="width: 30%; height: 30%; padding-top: 50px;"
+            :fit="contain"
           ></el-image>
+
     </div>
     <div class="part2">
       <div>
@@ -27,17 +29,14 @@
         </div>
       </div>
     </div>
-    <div class="ontheWay">
+  </div>
+  <div class="ontheWay">
       {{ $t("home.stillWork") }}
-    </div>
   </div>
   <el-backtop :right="100" :bottom="100" />
-  <footerOne></footerOne>
 </template>
 
 <script setup>
-import NaviBar from "../components/NaviBar.vue";
-import footerOne from "../components/Footer.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
@@ -51,8 +50,10 @@ const toCurrentProject = () => {
 
 <style scoped>
 .mainBody {
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  animation: 1s ease-in fade-inL;
 }
 
 .part1 {
@@ -81,5 +82,20 @@ const toCurrentProject = () => {
   padding-top: 15%;
   font-size: 25px;
   text-shadow: 1px 1px rgba(72, 79, 72, 0.696);
+}
+
+
+@keyframes fade-inL{
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
