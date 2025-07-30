@@ -1,5 +1,5 @@
 <template>
-  <navi-bar></navi-bar>
+  <!-- <el-skeleton animated loading/> -->
   <div class="mainBody">
     <div class="part1 mb-4">
         <div style="margin-top: 25px;">
@@ -29,17 +29,14 @@
         </div>
       </div>
     </div>
-    <div class="ontheWay">
+  </div>
+  <div class="ontheWay">
       {{ $t("home.stillWork") }}
-    </div>
   </div>
   <el-backtop :right="100" :bottom="100" />
-  <footerOne></footerOne>
 </template>
 
 <script setup>
-import NaviBar from "../components/NaviBar.vue";
-import footerOne from "../components/Footer.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 

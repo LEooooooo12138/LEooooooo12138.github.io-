@@ -5,7 +5,7 @@
       :router="true"
       class="el-menu-poper-demo"
       mode="horizontal"
-      ellipsis
+      :ellipsis="false"
       :popper-offset="6"
     >
       <el-menu-item index="/">
@@ -17,7 +17,7 @@
           <font-awesome-icon icon="user" style="padding-right: 8px" />
           {{ $t("nav.about") }}
         </el-menu-item>
-        <el-sub-menu index="/project" disabled="true">
+        <el-sub-menu index="/project" >
           <template #title
             ><Edit
               style="
@@ -45,7 +45,46 @@
   </div>
 
   <div v-else>
-    我是移动端的navbae\r
+    <el-menu
+      :router="true"
+      class="el-menu-poper-demo"
+      mode="horizontal"
+      :popper-offset="6"
+    >
+      <el-menu-item index="/">
+        <el-icon><house /></el-icon>
+        <p>{{ $t("nav.home") }}</p>
+      </el-menu-item>
+      <div class="flex-grow">
+        <el-menu-item index="/about">
+          <font-awesome-icon icon="user" style="padding-right: 8px" />
+          {{ $t("nav.about") }}
+        </el-menu-item>
+        <el-sub-menu index="/project" :disabled="true">
+          <template #title
+            ><Edit
+              style="
+                width: 1em;
+                height: 1em;
+                margin-right: 8px;
+                font-size: 20px;
+              "
+            />{{ $t("nav.myProj") }}</template
+          >
+          <el-menu-item index="/current">{{ $t("nav.current") }}</el-menu-item>
+          <el-menu-item index="/past">{{ $t("nav.past") }}</el-menu-item>
+        </el-sub-menu>
+        <el-menu-item index="/contact">
+          <font-awesome-icon icon="phone" style="padding-right: 8px" />
+          {{ $t("nav.contact") }}
+        </el-menu-item>
+        <el-menu-item @click="toggle">
+          <el-button type="success" circle>
+            <font-awesome-icon icon="language" size="xl" />
+          </el-button>
+        </el-menu-item>
+      </div>
+    </el-menu>
 
   </div>
 </template>
@@ -82,7 +121,7 @@ onMounted(()=>{
     window.addEventListener('resize', checkMobile);
 })
 onBeforeUnmount(()=>{
-  window.removeEventListener('resize', this.checkMobile);
+  window.removeEventListener('resize', checkMobile);
 })
 const checkMobile = ()=>{
   const val = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);

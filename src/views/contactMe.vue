@@ -1,16 +1,17 @@
 <template>
-    <navi-bar></navi-bar>
     <div class="mainBody">
-        <h1>Contact Me</h1>
+        <h1>{{ $t ('contact.title') }}</h1>
 
-        <h2>If you are interested in me, please contact me</h2>
+        <h2>{{ $t ('contact.label')}}</h2>
         <div>
-            <p>Phone: +61 0466556933</p>
+            <p>{{ $t ('contact.phone')}}</p>
+            <br/>
             <div class="right-footer">
                 <el-link @click="centerDialogVisible = true">
                 <el-icon><ChatDotRound /></el-icon>
                     {{ $t("footers.contactWay1") }}: NClol12138
                 </el-link>
+                <br/>
                 <br/>
                 <el-link href="mailto:leoyao12138@gmail.com">
                 <font-awesome-icon icon="envelope" />
@@ -19,8 +20,6 @@
             </div>
         </div>
     </div>
-
-    <footerOne></footerOne>
 
 
     <el-dialog
@@ -47,7 +46,6 @@
 </template>
 
 <script setup>
-import NaviBar from '../components/NaviBar.vue';
 import footerOne from '../components/Footer.vue';
 
 import { ref } from "vue";

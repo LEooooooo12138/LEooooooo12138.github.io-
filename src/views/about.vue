@@ -1,5 +1,4 @@
 <template>
-    <navi-bar></navi-bar>
     <el-space direction="vertical" size="large" class="mainBody">
         <div>
             <h1>{{ $t ('about.title1') }}</h1>
@@ -30,15 +29,39 @@
             <h3><el-icon class="icons"><Hide /></el-icon>Not skilled but some basic</h3>
             <div>UE5, Unity, Maya</div>
         </div>
-
         <div>
-            <h2>{{ $t ('about.part3Title') }}</h2>   
-            <p>{{ $t ('about.part3Content') }}</p>
+            <el-slider v-model="value" :min="2018" :max="2024" :step="1" style="width: 300px" >
+            </el-slider>
         </div>
+        <div class="yearDoing">
+            <div v-if="value===2018">
+                <h2>{{ $t ('about.part3Title') }}</h2>   
+                <p>{{ $t ('about.part2018') }}</p>
+            </div> 
+            <div v-if="value===2019">
+                <h2>{{ $t ('about.part3Title') }}</h2>   
+                <p>{{ $t ('about.part2019') }}</p>
+            </div> 
+            <div v-if="value===2020|| value===2021">
+                <h2>{{ $t ('about.part3Title') }}</h2>   
+                <p>{{ $t ('about.part2020To2021') }}</p>
+            </div> 
+            <div v-if="value===2022">
+                <h2>{{ $t ('about.part3Title') }}</h2>   
+                <p>{{ $t ('about.part2022') }}</p>
+            </div> 
+            <div v-if="value===2023">
+                <h2>{{ $t ('about.part3Title') }}</h2>   
+                <p>{{ $t ('about.part2023') }}</p>
+            </div> 
+            <div v-if="value===2024">
+                <h2>{{ $t ('about.part3Title') }}</h2>   
+                <p>{{ $t ('about.part3Content') }}</p>
+            </div> 
+        </div>
+
     </el-space>
     
-
-    <footerOne></footerOne>
 </template>
 
 <script setup>
@@ -47,11 +70,15 @@ import footerOne from '../components/Footer.vue';
 import resumeFile from '../assets/resume/CV.pdf';
 import { faDatabase, faFileCode, faKeyboard } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { ref } from 'vue';
 library.add( faDatabase, faKeyboard,faFileCode)
+
+const value = ref('2018')
 
 const download = ()=> {
     window.open(resumeFile)
 }
+
 </script>
 
 
@@ -65,8 +92,19 @@ const download = ()=> {
 
 }
 
+
+.timeline {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 .icons {
     padding: 6px;
+}
+
+.yearDoing{
+    animation: 1s ease-in fade-inL;
 }
 
 @keyframes fade-inL{

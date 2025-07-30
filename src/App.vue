@@ -1,9 +1,12 @@
 <script setup>
-
+import NaviBar from './components/NaviBar.vue';
+import footerOne from './components/Footer.vue'
 </script>
 
 <template>
+  <navi-bar/>
   <router-view></router-view>
+  <footerOne></footerOne>
 </template>
 
 

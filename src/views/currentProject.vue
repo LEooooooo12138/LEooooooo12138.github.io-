@@ -1,5 +1,4 @@
 <template>
-    <navi-bar></navi-bar>
     <div class="mainBody">
         <h2>{{ $t ('current.title1') }} {{ $t ('current.projectName') }}</h2>
         <p>I am working on this page now. 我他妈在写呢别催了</p>
@@ -7,7 +6,6 @@
     
     
     
-    <footerOne></footerOne>
 </template>
 
 <script setup>
